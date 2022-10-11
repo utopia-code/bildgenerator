@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+<head>
+	<title>Bild generator</title>
+	<meta charset="utf-8">   
+    <script src="bildGenerator.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="bildGenerator.css"/>
+    
+</head>
+
+<body>
+    <h1>BILD GENERATOR</h1>
+    <section id="container">
+        <section id="palette">
+            <!-- <label for="farben">Farben</label> -->
+            <b>Farben auswählen: </b>
+            <input id="farben" type="color"value="#000">
+            <!-- <label for="size">Linien</label> -->
+            <b>Größe: </b>
+            <input id="groesseLinien" type="range" max="150" min="1" value="1">
+            
+            <input id="loeschen" type="submit" value="Löschen">
+            
+            <div class="select-sim" id="selectPinsel">
+                <div class="options">
+                    <div class="option">
+                        <input type="radio" name="linien" value="pinsel" id="pinsel" checked/>
+                        <label for="pinsel">
+                            <img src="bilder/linien1.jpg" alt="" /> Linien
+                        </label> 
+                    </div> 
+
+                    <div class="option">
+                        <input type="radio" name="linien" value="pinsel2" id="pinsel2" />
+                        <label for="pinsel2">
+                            <img src="bilder/linien2.jpg" alt="" /> Linien mit Schatten
+                        </label> 
+                    </div>
+
+                    <div class="option">
+                        <input type="radio" name="linien" value="pinsel3" id="pinsel3" />
+                        <label for="pinsel3">
+                            <img src="bilder/linien3.jpg" alt="" /> Spray
+                        </label> 
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <div id="canvasdiv">
+
+            <canvas id="canvasBG" width="900" height="900"></canvas>
+            <canvas id="canvasFG" width="900" height="900"></canvas>
+
+        </div>
+    </section> 
+
+    <div id="preloader">
+        <img src="bilder/bild0.png" id="bild0" />
+        <img src="bilder/bild1.png" id="bild1" />
+        <img src="bilder/bild2.png" id="bild2" />
+        <img src="bilder/bild3.png" id="bild3" />
+    </div>
+    
+    <div id="buttons">
+        <button id="generator">Bild Generator</button>
+        <button id="oben">Zeichnen oben</button>
+        <button id="mitte">Zeichnen in der Mitte</button>
+        <button id="unten">Zeichnen unten</button>
+        <button id="bildSpeichern">Bild Speichern</button> <br>
+    </div>
+    
+    <div id="ausgabe">
+        <img alt="" id="img" src="">
+    </div>
+        
+</body>
+
+</html>
